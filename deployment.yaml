@@ -4,6 +4,11 @@ metadata:
   name: tictactoe
 spec:
   replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
   selector:
     matchLabels:
       app: tictactoe
@@ -14,6 +19,13 @@ spec:
     spec:
       containers:
       - name: tictactoe
-        image: nirbhaisingh/tictactoe-cpu
+        image: kodekloud/tictactoe
         ports:
         - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
