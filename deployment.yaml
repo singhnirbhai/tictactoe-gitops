@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: tictactoe
-        image: kodekloud/tictactoe
+        image: nirbhaisingh/tictactoe-game
         ports:
         - containerPort: 80
         readinessProbe:
