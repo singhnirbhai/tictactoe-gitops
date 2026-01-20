@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: tictactoe
-        image: nirbhaisingh/tictactoe-game
+        image: nirbhaisingh/tictactoe-cpu
         ports:
         - containerPort: 80
