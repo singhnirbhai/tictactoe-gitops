@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tictactoe
+  name: netflix-app #tictactoe
 spec:
   replicas: 2
   strategy:
@@ -11,14 +11,14 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      app: tictactoe
+      app: netflix-app #tictactoe
   template:
     metadata:
       labels:
-        app: tictactoe
+        app: netflix-app #tictactoe
     spec:
       containers:
-      - name: tictactoe
+      - name: netflix-app #tictactoe
         image: nirbhaisingh/netflix-app
         ports:
         - containerPort: 80
