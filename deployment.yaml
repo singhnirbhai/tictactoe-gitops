@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: netflix-app #tictactoe
-        image: nirbhaisingh/netflix-app
+        image: nirbhaisingh/netflix-app:13
         ports:
         - containerPort: 5173 #80
         readinessProbe:
